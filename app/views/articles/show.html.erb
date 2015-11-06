@@ -1,0 +1,39 @@
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @article.image %>
+</p>
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
+
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<%= link_to 'Edit', edit_article_path(@article) %>
+<%= link_to 'Back', articles_path %>
+
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="<%= image_tag @article.image %>" alt="...">
+      <div class="caption">
+        <h3>Title:<%= @article.title %></h3>
+        <p>
+          <strong>Text:</strong>
+          <%= @article.text %>
+        </p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+</div>
